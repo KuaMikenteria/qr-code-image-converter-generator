@@ -9,28 +9,6 @@ A free, privacy-first web app that converts images into QR codes and back again.
 
 ---
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [How It Works](#how-it-works)
-- [Capacity Rules](#capacity-rules)
-- [Project Structure](#project-structure)
-- [Configuration](#configuration)
-- [Browser Support](#browser-support)
-- [Limitations](#limitations)
-- [Troubleshooting](#troubleshooting)
-- [Future Recommendations](#future-recommendations)
-- [Contributing](#contributing)
-- [Support](#support)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-- [Creator / Designer](#creator--designer)
-
----
-
 ## Overview
 
 QRForge is a single-page web application with **two core features**:
@@ -128,6 +106,17 @@ Yes — 10 MB per input image, enforced client-side to avoid memory issues. The 
 ## Version
 
 **Current release:** `v1.0.0`
+
+---
+
+## Creator / Designer
+
+**QRForge — Image ↔ QR Code Converter** was designed and developed as a simple, private alternative to ad-heavy QR generators on the web.
+
+- **Designer & Developer:** *[Kim Ruzzel L. Enteria]*
+- **Contact:** *[[Kim Ruzzel L. Enteria](https://www.facebook.com/kritikomentaryo92)]*
+- **Repository:** https://github.com/KuaMikenteria/qr-code-image-converter-generator
+> Built for the open web. 🌐
 
 ---
 
