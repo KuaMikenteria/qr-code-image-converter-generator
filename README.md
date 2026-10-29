@@ -23,6 +23,8 @@ A free, privacy-first web app that converts images into QR codes and back again.
 - [Limitations](#limitations)
 - [Troubleshooting](#troubleshooting)
 - [Future Recommendations](#future-recommendations)
+- [Contributing](#contributing)
+- [Support](#support)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 - [Creator / Designer](#creator--designer)
@@ -73,29 +75,62 @@ No build step. No bundler. Just open the HTML file.
 
 ---
 
-## Contributing
+## Getting Started
 
-Contributions are welcome! Since this is a single-file project, the workflow is simple:
+### Option 1 — Run locally
 
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/my-improvement`).
-3. Make your changes in `index.html` (or split into modules if you prefer).
-4. Test in at least two modern browsers (Chrome + Firefox recommended).
-5. Open a pull request with a clear description of what changed and why.
+# Clone the repository
+git clone https://github.com/your-username/qrforge.git
+cd qrforge
 
-Please keep the project dependency-free (no build tools, no frameworks) and maintain the privacy-first, client-side-only design.
-
----
-
-## Support
-
-- **Issues** — Open a GitHub issue for bugs or feature requests.
-- **Discussions** — Use GitHub Discussions for general questions.
-- **Contact** — Reach out via the contact link in the Creator section above.
-
-This project is maintained in spare time. Response times may vary, but all reports are read.
+# Open in your browser
+open index.html       # macOS
+# or
+xdg-open index.html   # Linux
+# or
+start index.html      # Windows
 
 ---
 
-> Built for the open web. 🌐
+## Changelog
 
+### v1.0.0 — Initial release
+- Image → QR encoding with adaptive compression
+- QR → image decoding with multi-scale scanning
+- Drag & drop, file browse, and clipboard paste input
+- Dark mode with persistence
+- Fully responsive single-file build
+- Download support for both directions
+
+Future versions will follow [Semantic Versioning](https://semver.org/).
+
+---
+
+## FAQ
+
+**How much image data actually fits in a QR code?**
+About 2.9 KB at error correction level L. That's enough for a small JPEG thumbnail — roughly 200–400 px on the long edge, depending on complexity.
+
+**Does the quality slider affect scan reliability?**
+Yes. Higher detail produces denser QR codes (more modules), which are harder for older cameras or printed copies to read. If a code won't scan, drop to **Compact** and retry.
+
+**Can I scan the QR with my phone directly from the screen?**
+Yes. Display the generated QR at a comfortable size on a bright screen and point your phone camera at it. Screen scanning usually works better than small printed copies.
+
+**Does this work offline?**
+Almost — the QR libraries (`qrcode` and `jsQR`) are loaded from a CDN. Once the page has loaded, no further network requests are made. For full offline support, see the PWA recommendation in [Future Recommendations](#future-recommendations).
+
+**Is there a file size limit?**
+Yes — 10 MB per input image, enforced client-side to avoid memory issues. The encoder will still compress it down to a few KB for the QR.
+
+---
+
+## Version
+
+**Current release:** `v1.0.0`
+
+---
+
+<p align="center">
+  <sub>QRForge is released under the MIT License. QR Code is a registered trademark of DENSO WAVE INCORPORATED.</sub>
+</p>
